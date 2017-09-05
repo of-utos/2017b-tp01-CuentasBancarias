@@ -7,5 +7,4 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Octavio Frutos ([of-utos](https://github.com/of-utos))
