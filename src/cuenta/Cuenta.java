@@ -2,9 +2,22 @@ package cuenta;
 
 public class Cuenta {
 
-	public double monto = 0;
+	private double monto;
+
+	public Cuenta(double monto) {
+		this.monto = monto;
+	}
 
 	public void transferirMontoHacia(double monto, Cuenta cuentaDestino) {
-		cuentaDestino.monto += monto;
+		cuentaDestino.asignarMonto(monto);
+		this.monto -= monto;
+	}
+
+	public double getMonto() {
+		return monto;
+	}
+
+	private void asignarMonto(double monto) {
+		this.monto += monto;
 	}
 }

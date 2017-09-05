@@ -10,13 +10,13 @@ public class TestCuenta {
 
 	@Test
 	public void test() {
-		Cuenta cuentaOrigen = new Cuenta();
-		Cuenta cuentaDestino = new Cuenta();
+		Cuenta cuentaOrigen = new Cuenta(1000);
+		Cuenta cuentaDestino = new Cuenta(0);
 
 		cuentaOrigen.transferirMontoHacia(1000, cuentaDestino);
 
-		double saldoActualDestino = cuentaDestino.monto;
-		double saldoActualOrigen = cuentaDestino.monto;
+		double saldoActualDestino = cuentaDestino.getMonto();
+		double saldoActualOrigen = cuentaOrigen.getMonto();
 
 		// COMPRUEBO QUE SE HAYA ACREDITADO EL SALDO.
 		assertEquals(1000, saldoActualDestino, 0);
