@@ -5,6 +5,6 @@ public class Cuenta {
 	public double monto = 0;
 
 	public void transferirMontoHacia(double monto, Cuenta cuentaDestino) {
-
+		cuentaDestino.monto += monto;
 	}
 }
