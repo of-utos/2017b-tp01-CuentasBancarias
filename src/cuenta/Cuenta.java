@@ -37,7 +37,7 @@ public class Cuenta {
 	 * 
 	 * @return Monto disponible en la cuenta. <br>
 	 */
-	public double getMonto() {
+	public double verMontoDisponible() {
 		return monto;
 	}
 

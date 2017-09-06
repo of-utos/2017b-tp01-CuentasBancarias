@@ -15,13 +15,16 @@ public class TestCuenta {
 
 		cuentaOrigen.transferirMontoHacia(1000, cuentaDestino);
 
-		double saldoActualDestino = cuentaDestino.getMonto();
-		double saldoActualOrigen = cuentaOrigen.getMonto();
+		double saldoActualDestino = cuentaDestino.verMontoDisponible();
+		double saldoActualOrigen = cuentaOrigen.verMontoDisponible();
 
 		// COMPRUEBO QUE SE HAYA ACREDITADO EL SALDO.
 		assertEquals(1000, saldoActualDestino, 0);
 
 		// COMPRUEBO QUE LA TRANSFERENCIA SEA COHERENTE ENTRE AMBAS PARTES.
 		assertEquals(saldoActualOrigen + 1000, saldoActualDestino, 0);
-	}
+
+		cuentaOrigen.transferirMontoHacia(10, cuentaDestino);
+		saldoActualOrigen = cuentaOrigen.verMontoDisponible();
+	}	
 }
