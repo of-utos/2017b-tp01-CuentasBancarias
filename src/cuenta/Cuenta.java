@@ -28,8 +28,10 @@ public class Cuenta {
 	 *            Cuenta a la que transfiere. <br>
 	 */
 	public void transferirMontoHacia(final double monto, final Cuenta cuentaDestino) {
-		cuentaDestino.asignarMonto(monto);
-		this.monto -= monto;
+		if(this.monto >= monto){
+			cuentaDestino.asignarMonto(monto);
+			this.monto -= monto;
+		}
 	}
 
 	/**

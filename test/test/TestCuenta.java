@@ -27,7 +27,7 @@ public class TestCuenta {
 		cuentaOrigen.transferirMontoHacia(10, cuentaDestino);
 		saldoActualOrigen = cuentaOrigen.verMontoDisponible();
 		
-		// COMPRUEBO QUE SI EL SALDO A TRANSFERIR NO FUE MAYOR QUE EL
+		// COMPRUEBO QUE EL SALDO A TRANSFERIR NO FUE MAYOR QUE EL
 		// DISPONIBLE, IMPIDIENDO QUE SE ENCUENTRE EN NUMEROS NEGATIVOS.
 		assertTrue(saldoActualOrigen >= 0);
 	}	
