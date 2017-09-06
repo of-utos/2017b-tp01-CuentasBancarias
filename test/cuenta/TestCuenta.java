@@ -1,10 +1,8 @@
-package test;
+package cuenta;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-
-import cuenta.Cuenta;
 
 public class TestCuenta {
 
